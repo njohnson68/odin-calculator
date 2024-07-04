@@ -1,0 +1,17 @@
+.calc-container {
+  background-color: black;
+  height: 400px;
+  width: 350px;
+  margin: auto;
+}
+
+button {
+  height: 65px;
+  width: 75px;
+}
+
+input {
+  height: 50px;
+  width: 300px;
+  font-size: 30px;
+}
