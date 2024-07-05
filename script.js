@@ -15,7 +15,11 @@ function multiply(num1, num2) {
 }
 
 function divide(num1, num2) {
-  display.value = num1 / num2;
+  if (num2 == 0) {
+    display.value = "nice try";
+  } else {
+    display.value = num1 / num2;
+  }
 }
 
 function operate(num1, op, num2) {
@@ -61,9 +65,6 @@ opButtons.forEach((button) => {
       operate(number1, operator, number2);
       number1 = display.value;
       number2 = "";
-    }
-    if (number1 !== "" && number2 == "" && operator !== "") {
-      display.value.replace(/.$/, "");
     }
     display.value += button.textContent;
     operator = button.textContent;

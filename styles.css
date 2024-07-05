@@ -1,3 +1,7 @@
+body {
+  background-color: steelblue;
+}
+
 .calc-container {
   background-color: black;
   height: 450px;
