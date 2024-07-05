@@ -1,7 +1,9 @@
 let number1 = "";
 let operator = "";
 let number2 = "";
+const display = document.querySelector(".display");
 
+//basic math functions
 function add(num1, num2) {
   display.value = parseFloat(num1) + parseFloat(num2);
 }
@@ -22,6 +24,7 @@ function divide(num1, num2) {
   }
 }
 
+//choose which math function to do based on inputted operator
 function operate(num1, op, num2) {
   if (op == "+") {
     add(num1, num2);
@@ -37,8 +40,8 @@ function operate(num1, op, num2) {
   }
 }
 
+//listening for number button clicks
 const numButtons = document.querySelectorAll(".num-btn");
-const display = document.querySelector(".display");
 numButtons.forEach((button) => {
   button.addEventListener("click", () => {
     display.value += button.textContent;
@@ -50,6 +53,7 @@ numButtons.forEach((button) => {
   });
 });
 
+//listening for clear button clicks
 const clear = document.querySelector(".clear-btn");
 clear.addEventListener("click", () => {
   display.value = "";
@@ -58,6 +62,7 @@ clear.addEventListener("click", () => {
   number2 = "";
 });
 
+//listening for operator button clicks
 const opButtons = document.querySelectorAll(".op-btn");
 opButtons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -71,6 +76,7 @@ opButtons.forEach((button) => {
   });
 });
 
+//listening for equal button clicks
 const equals = document.querySelector(".eq-btn");
 equals.addEventListener("click", () => {
   if (number1 !== "" && number2 !== "" && operator !== "") {
